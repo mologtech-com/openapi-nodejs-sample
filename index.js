@@ -30,43 +30,18 @@ async function main() {
     });
 
 
-    var pickByTime = await client.Picked.selectByTime({
-      "PAGE": 1,
-      "SIZE": 10,
-      //"RECEIVED_DATE_FROM": "2021-03-23T00:00:00+07:00",
-      //"RECEIVED_DATE_TO": "2021-03-23T23:59:59+07:00",
-      //"CREATE_DATE_FROM": "2021-03-23T00:00:00+07:00",
-      //"CREATE_DATE_TO": "2021-03-23T23:59:59+07:00",
-    });
-
     var pickByJob = await client.Picked.selectByJob({
       "Rel1 No": "QQ",
     });
 
 
 
-    var packByTime = await client.Packed.selectByTime({
-      "PAGE": 1,
-      "SIZE": 10,
-      //"RECEIVED_DATE_FROM": "2021-03-23T00:00:00+07:00",
-      //"RECEIVED_DATE_TO": "2021-03-23T23:59:59+07:00",
-      //"CREATE_DATE_FROM": "2021-03-23T00:00:00+07:00",
-      //"CREATE_DATE_TO": "2021-03-23T23:59:59+07:00",
-    });
-
     var packByJob = await client.Packed.selectByJob({
       "Rel1 No": "QQ",
     });
 
-
-
-    var grByTime = await client.GR.selectByTime({
-      "PAGE": 1,
-      "SIZE": 10,
-      //"RECEIVED_DATE_FROM": "2021-03-23T00:00:00+07:00",
-      //"RECEIVED_DATE_TO": "2021-03-23T23:59:59+07:00",
-      //"CREATE_DATE_FROM": "2021-03-23T00:00:00+07:00",
-      //"CREATE_DATE_TO": "2021-03-23T23:59:59+07:00",
+    var shipByJob = await client.Shipped.selectByJob({
+      "Rel1 No": "QQ",
     });
 
     var grByJob = await client.GR.selectByJob({
